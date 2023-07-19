@@ -12,4 +12,4 @@ const longestword = (sentence) => {
 
 const sentence = "Iam gokul from Coimbatore";
 const length = longestword(sentence);
-console.log(length);
+console.log("Longest word is : ", length);
