@@ -1,4 +1,4 @@
-const longestword = (sentence) => {
+const findLongestWord = (sentence) => {
   const arraylength = sentence.split(" ");
   let longest = " ";
   for (let i = 0; i < arraylength.length; i++) {
@@ -11,5 +11,5 @@ const longestword = (sentence) => {
 };
 
 const sentence = "I am gokul from Coimbatore";
-const length = longestword(sentence);
+const length = findLongestWord(sentence);
 console.log("Longest word is: ", length);
