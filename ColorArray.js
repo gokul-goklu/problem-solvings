@@ -26,10 +26,5 @@ const data = [
     city: "Houston",
   },
 ];
-
-const result = data.filter((item) => {
-  if (colors.includes(item.color)) return item;
-  if (colors.includes(item.color)) return item;
-});
-
+const result = data.filter((item) => colors.includes(item.color));
 console.log(result);
