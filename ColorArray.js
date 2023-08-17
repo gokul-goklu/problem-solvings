@@ -28,8 +28,8 @@ const data = [
 ];
 
 const result = data.filter((item) => {
-  if (item.color == colors[0]) return item;
-  if (item.color == colors[1]) return item;
+  if (colors.includes(item.color)) return item;
+  if (colors.includes(item.color)) return item;
 });
 
 console.log(result);
