@@ -13,5 +13,5 @@ const alterNumber = (num) => {
   console.log(num);
 };
 
-const num = [1, 0, 1, 1, 0, 0, 0, 1];
+const num = [0, 1, 1, 1, 0, 0, 0, 1];
 alterNumber(num);
