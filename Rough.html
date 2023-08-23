@@ -10,47 +10,22 @@
   </body>
 </html>
 <script>
-  const arr = [2, -3, 4, -5, 6];
-  let k = 4;
+  const arr = "[{()}]";
 
-  const Sorting = (arr, k) => {
-    let result;
-    let t = 0;
-    const positive = [];
-    const negative = [];
+  const paranthesis = (arr) => {
+    const mapping = {
+      ")": "(",
+      "}": "{",
+      "]": "[",
+    };
+    let arr2 = [];
     for (let i = 0; i < arr.length; i++) {
-      const num = arr[i];
-      if (num >= 0) {
-        positive[num] = (positive[num] || 0) + 1;
-      }
+      if (arr[i] == "[" || arr[i] == "{" || arr[i] == "(") arr2.push(arr[i]);
+      else if (arr2.pop !== mapping[arr[i]]) return false;
+    }
 
-      if (num < 0) {
-        let curr = Math.abs(num);
-        negative[curr] = (negative[curr] || 0) + 1;
-      }
-    }
-    for (let i = positive.length - 1; i >= 0; i--) {
-      if (k > t) {
-        if (positive[i]) t = t + positive[i];
-      }
-      if (t == k) {
-        result = i;
-        break;
-      }
-    }
-    if (k > t) {
-      for (let i = 0; i < negative.length; i++) {
-        if (k > t) {
-          if (negative[i]) t = t + negative[i];
-        }
-        if (k == t) {
-          result = -i;
-          break;
-        }
-      }
-    }
-    console.log(result);
+    if (arr2.length == 0) return true;
   };
 
-  Sorting(arr, k);
+  console.log(paranthesis(arr));
 </script>
